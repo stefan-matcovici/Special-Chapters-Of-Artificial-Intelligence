@@ -2,7 +2,7 @@
 ## This homework was about plotting in R and understanding common statistical distributions
 ---
 
-## Write a function R that displays the function graph f (x) = 2x over a specified range [a, b]. It will use the red color for the line graph.
+## Write a function R that displays the function graph ![function](https://latex.codecogs.com/gif.latex?f(x)&space;=&space;2^x) over a specified range [a, b]. It will use the red color for the line graph.
 ![][twos]
 
 ---
@@ -13,14 +13,14 @@
 
 ---
 
-## Draw the graphs corresponding to the normal distribution N (μ, $σ^2$), on [-20, 20] for μ = 0 and σ = 0.1, 1, 10. A file (.PDF, .PNG or .EPS) will be generated for each graph.
+## Draw the graphs corresponding to the normal distribution ![distribution](https://latex.codecogs.com/gif.latex?N(\mu&space;,&space;\sigma&space;^{2})), on [-20, 20] for μ = 0 and σ = 0.1, 1, 10. A file (.PDF, .PNG or .EPS) will be generated for each graph.
 
 ![][dnorm100] ![][dnorm1]
 
 ---
 
-## Write a function that generates a number of 1000 samples, $v_{1}$, ..., $v_{1000}$, each sample $v_{i}$ (i = 1, ..., 1000) of dimension n, using the uniform distribution with values ​​of the interval [-10,10]. The sample size n is the parameter of the function. The function returns the vector the averages of the 1000 samples ($v_1$, ..., $v_{1000}$), where $v_i$ = mean($v_i$). Call this function CLT. Use this function to build the histogram of the averages of the 1000 samples when their size n is equal to 1.
-### This exercise was to prove in a graphical way the **Central Limit Theorem** which states that if $x_1$, $x_2$, ..., $x_n$ is a random sample of size n from any distribution with mean µ and variance σ then the sample mean $\overline{X}$ = $\frac{1}{n} * \sum_{i=1}^{n}x_i$ has an approximate normal distribution with mean µ and variance $\frac{σ^2}{n}$. That is, approximately $\overline{X} \approx N(µ, \frac{σ^2}{n})$. The approximation gets better for large n.
+## Write a function that generates a number of 1000 samples, ![numbers](https://latex.codecogs.com/gif.latex?v_{1}$,&space;...,&space;$v_{1000}), each sample ![vi](https://latex.codecogs.com/gif.latex?v_{1}) (i = 1, ..., 1000) of dimension n, using the uniform distribution with values ​​of the interval [-10,10]. The sample size n is the parameter of the function. The function returns the vector the averages of the 1000 samples ![numbers](https://latex.codecogs.com/gif.latex?v_{1}$,&space;...,&space;$v_{1000}), where ![mean](https://latex.codecogs.com/gif.latex?v_i&space;=&space;mean(v_i)). Call this function CLT. Use this function to build the histogram of the averages of the 1000 samples when their size n is equal to 1.
+### This exercise was to prove in a graphical way the **Central Limit Theorem** which states that if ![nnumbers](https://latex.codecogs.com/gif.latex?x_1,&space;x_2,&space;...,&space;x_n) is a random sample of size n from any distribution with mean µ and variance σ then the sample mean ![mean](https://latex.codecogs.com/gif.latex?\overline{x}&space;=&space;\frac{1}{n}&space;*&space;\sum_{i=1}^{n}x_i) has an approximate normal distribution with mean µ and variance ![variance](https://latex.codecogs.com/gif.latex?\frac{\sigma&space;^2}{n}). That is, approximately ![approx](https://latex.codecogs.com/gif.latex?\overline{X}&space;\approx&space;N(\mu&space;,&space;\frac{\sigma&space;^2}{n})). The approximation gets better for large n.
 
 ![][clt1]  ![][clt100]
 
