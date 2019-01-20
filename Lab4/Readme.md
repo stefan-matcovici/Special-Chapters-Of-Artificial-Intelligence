@@ -1,8 +1,8 @@
-# Forth Homework
+# Fourth Homework
 This homework was about choosing the best regression sub-model based on different criteria. The search is an exhaustive one.
 ---
 
-### Let's consider the ["House" data set](house.dat) (Source: Long-KoganRealty, Chicago, USA).
+### Let's consider the ["House" data set](house.dat) (Source: Long-Kogan Realty, Chicago, USA).
 #### The 14 columns correspond, in order, to the following variables:
 
 
