@@ -2,8 +2,8 @@
 This homework was about choosing the best regression sub-model based on different criteria. The search is an exhaustive one.
 ---
 
-###Let's consider the ["House" data set](house.dat) (Source: Long-KoganRealty, Chicago, USA).
-####The 14 columns correspond, in order, to the following variables:
+### Let's consider the ["House" data set](house.dat) (Source: Long-KoganRealty, Chicago, USA).
+#### The 14 columns correspond, in order, to the following variables:
 
 
 | Variable        | Name           | Meaning |
@@ -32,4 +32,4 @@ This homework was about choosing the best regression sub-model based on differen
 ![](./png/r-adjusted-criterium.png)
 ![](./png/cp-criterium.png)
 1. Select, according to the results obtained at the previous points, the best (sub) model of regression.
-#####Observing the above plots, RSS and R-squared tend to favour the biggest model in terms of variables. R-squared adjusted tries to penalize models with more variables and so does Cp. As a conclusion, the sub-model with 7 variables it's the best analysing the above-mentioned criteria.
+##### Observing the above plots, RSS and R-squared tend to favour the biggest model in terms of variables. R-squared adjusted tries to penalize models with more variables and so does Cp. As a conclusion, the sub-model with 7 variables it's the best analysing the above-mentioned criteria.
