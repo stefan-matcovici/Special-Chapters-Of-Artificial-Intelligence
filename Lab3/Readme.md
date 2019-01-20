@@ -1,4 +1,4 @@
-# Second Homework
+# Third Homework
 ## This homework was about implementing my own simple regression parameter estimator similar to the lm function in R
 ---
 
