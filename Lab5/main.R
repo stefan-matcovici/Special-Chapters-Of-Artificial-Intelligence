@@ -38,7 +38,7 @@ forward_selection = function(data, alpha) {
     
     m = cbind(remaining_attributes, scores)
 
-    filtered_attributes = m[which(m[ , 'scores'] < alpha),, drop=FALSE]
+    filtered_attributes = m[which(as.numeric(m[ , 'scores']) < alpha),, drop=FALSE]
     if (length(filtered_attributes) > 0) {
       
       all_attributes_significant = TRUE
@@ -104,7 +104,7 @@ stepwise_selection = function(data, alpha) {
     
     m = cbind(remaining_attributes, scores)
     
-    filtered_attributes = m[which(m[ , 'scores'] < alpha),, drop=FALSE]
+    filtered_attributes = m[which(as.numeric(m[ , 'scores']) < alpha),, drop=FALSE]
     if (length(filtered_attributes) > 0) {
       
       all_attributes_significant = TRUE
@@ -134,29 +134,44 @@ stepwise_selection = function(data, alpha) {
   current_attributes
 }
 
-plot_model = function(data, model) {
-  
-}
-
 backward_attributes = backward_selection(houses, 0.05)
 forward_attributes = forward_selection(houses, 0.05)
 stepwise_attributes = stepwise_selection(houses, 0.1)
+exhaustive_attributes = c("BRD", "FLR", "RMS", "ST", "LOT", "GAR", "L2")
 
 backward_model = get_model_from_attribute_list(houses, backward_attributes)
 forward_model = get_model_from_attribute_list(houses, forward_attributes)
 stepwise_model = get_model_from_attribute_list(houses, stepwise_attributes)
+exhaustive_model = get_model_from_attribute_list(houses, exhaustive_attributes)
 
 forward_predictions = predict(forward_model)
 backward_predictions = predict(backward_model)
 stepwise_predictions = predict(stepwise_model)
+exhaustive_predictions = predict(exhaustive_model)
 target = houses[["PRICE"]]
 
 plot(target, forward_predictions, pch=19, col="red", xlab = "target", ylab = "prediction")
 points(target, backward_predictions, pch=18, col="blue")
 points(target, stepwise_predictions, pch=15, col="purple")
+points(target, exhaustive_predictions, pch=12, col="green")
 abline(0,1)
 
-legend("topleft", legend=c("Forward", "Backward", "Stepwise"), col=c("red", "blue", "purple"), pch=c(19, 18, 15), cex=1.3)
+legend("topleft", legend=c("Forward", "Backward", "Stepwise", "Exhaustive"), col=c("red", "blue", "purple", "green"), pch=c(19, 18, 15, 12), cex=1.3)
 
+plot(target, forward_predictions, pch=19, col="red", xlab = "target", ylab = "prediction")
+title("Forward")
+abline(0,1)
+
+plot(target, backward_predictions, pch=19, col="red", xlab = "target", ylab = "prediction")
+title("Backward")
+abline(0,1)
+
+plot(target, stepwise_predictions, pch=19, col="red", xlab = "target", ylab = "prediction")
+title("Stepwise")
+abline(0,1)
+
+plot(target, exhaustive_predictions, pch=19, col="red", xlab = "target", ylab = "prediction")
+title("Exhaustive")
+abline(0,1)
 
 
