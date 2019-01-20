@@ -11,18 +11,12 @@ The error distribution is ![aprox](https://latex.codecogs.com/gif.latex?\varepsi
 
 ## Consider the simple regression model y = a + b*x + ε. Write a function R that receives at the input of the observation of the model (2) and computes the estimated values and b of the regression coefficients and their 95% confidence intervals.
 
-## Using the above functions, determine the coefficients and their confidence intervals of 95%. Plot the graph of the estimated and real data in the cases a = 3, b = 5 and
-1. m = 100, xmin = -200, xmax = 200, sigma = 1.5;
+### Using the above functions, determine the coefficients and their confidence intervals of 95%. Plot the graph of the estimated and real data in the cases a = 3, b = 5 with different number of points standard deviation and spread of the values determined by the experiment:
 ![][1]
-1. m = 10, xmin = -5, xmax = 5, sigma = 1;
 ![][2]
-1. m = 10000, xmin = -5, xmax = 5, sigma = 1;
 ![][3]
-1. m = 10, xmin = 5, xmax = 5.2, sigma = 1;
 ![][4]
-1. m = 10000, xmin = 5, xmax = 5.2, sigma = 1;
 ![][5]
-1. m = 10, xmin = 5, xmax = 5.2, sigma = 0.01;
 ![][6]
 
 ---
@@ -30,8 +24,7 @@ The error distribution is ![aprox](https://latex.codecogs.com/gif.latex?\varepsi
 ### From these plots we can observe how a simple regression can be improved. This can be mainly achieved by:
 1. reducing σ, the inherent variability of the Y observations.
 1. increasing the sample size n.
-1. Increasing the spread of the X values which are determined by the experiments (survey).
-
+1. increasing the spread of the X values which are determined by the experiments (survey).
 
 [1]: regression-100--200-200-1.5.png
 [2]: regression-10--5-5-1.png
