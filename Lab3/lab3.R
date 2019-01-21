@@ -43,7 +43,7 @@ plot_regression = function(m, xmin, xmax, sigma) {
   a = 3
   b = 5
   
-  pdf(sprintf("regression-%s-%s-%s-%s.pdf",m,xmin,xmax,sigma))
+  png(sprintf("regression-%s-%s-%s-%s.png",m,xmin,xmax,sigma))
   
   observations = get_observations(m, a, b, xmin, xmax, sigma)
   r = regression_parameters(observations)

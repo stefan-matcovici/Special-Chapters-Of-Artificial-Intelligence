@@ -1,6 +1,6 @@
 # ex1
 twos = function (a, b) {
-  plot(2 ^ c(a:b), lwd="2", col="red", main=sprintf("f(x)=2^x, x in [%d, %d]", a, b), type="l")
+  plot(2 ^ c(a:b), lwd="2", col="red", main=sprintf("f(x)=2^x, x in [%d, %d]", a, b), type="l", xlab="x", ylab = "2^x")
 }
 
 twos(5, 10)
@@ -26,7 +26,7 @@ plot_binomial_distribution = function(n, probabilities, out_type) {
   }
 }
 
-plot_binomial_distribution(20, seq(0.1, 0.9, by=0.1), "eps")
+plot_binomial_distribution(20, seq(0.1, 0.9, by=0.1), "png")
 
 # ex3
 dir.create(file.path(getwd(), "png"), showWarnings = FALSE)
@@ -48,7 +48,7 @@ plot_normal_distribution = function(n, probabilities, out_type) {
   }
 }
 
-plot_normal_distribution(20, c(0.1, 1, 10), "pdf")
+plot_normal_distribution(20, c(0.1, 1, 10), "png")
 
 # ex4
 CLT = function(n) {
